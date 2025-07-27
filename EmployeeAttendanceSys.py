@@ -14,7 +14,7 @@ Attendance_data_temp = {}
 def Attendance(ID):
 
     if ID in Attendance_data_temp : # Checks for if ID already exists in temporary data dictionary...(Check Outs)
-        if ID not in Attendance_data_temp: # Why nested if? Becoz using employee[ID] with (random) not system saved IDs will raise error. 
+        if ID in employee: # Why nested if? Becoz using employee[ID] with (random IDs) not system saved IDs will raise error. 
             print(f"{employee[ID]} checked out")
             current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("\rTime:", current_time, end="")
@@ -39,10 +39,7 @@ def main():
         emp = int(input("Enter your Employee ID : "))
         #if emp.isdigit():
         Attendance(emp)
-        print("Enter valid ID in digits")
-
         off = int(input("\nEnter 0 to off the system other(1) to keep it on :"))
-
         if off == 0:
             break
 
