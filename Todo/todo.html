@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOs</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <header>
+        <marquee>
+            <h1>YOUR TODOs</h1>
+        </marquee>
+        <nav>
+            <a href="#">Login</a>
+            <a href="#">About</a>
+            <a href="#">Email</a>
+            <a href="#">Call US</a>
+        </nav>
+    </header>
+
+    <main>
+        <fieldset>
+            <legend>TODOs</legend>
+            <div class="input-group">
+                <label for="product-url">Enter title:</label>
+                <input type="text" id="TodoTitle" placeholder="Enter todo title" />
+                <br>
+                <label for="product-url">Enter description:</label>
+                <input type="text" id="TodoDescription" placeholder="Enter todo description" />
+            </div>
+            <br>
+            <button class="btn-hvr" id="11">Add</button>
+            <button class="btn-hvr" id="22">Clear all</button>
+        </fieldset>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </main>
+    <script src="todo.js"></script>
+</body>
+
+</html>
