@@ -10,9 +10,7 @@
 
 <body>
     <header>
-        <marquee>
-            <h1>YOUR TODOs</h1>
-        </marquee>
+       <div class="scroll-text">YOUR TODOs</div>
         <nav>
             <a href="#">Login</a>
             <a href="#">About</a>
@@ -32,8 +30,8 @@
                 <input type="text" id="TodoDescription" placeholder="Enter todo description" />
             </div>
             <br>
-            <button class="btn-hvr" id="11">Add</button>
-            <button class="btn-hvr" id="22">Clear all</button>
+            <button class="btn-hvr" id="addBtn">Add</button>
+            <button class="btn-hvr" id="clearAll">Clear all</button>
         </fieldset>
         <table class="table">
             <thead>
@@ -41,7 +39,14 @@
                     <th scope="col">S.No.</th>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Action</th>
+                    <th scope="col" colspan="2">Action</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>sleep early</td>
+                    <td>11 PM exact</td>
+                    <td><button id="Done">Done</button></td>
+                    <td><button id="DelTodo">Delete</button></td>
                 </tr>
             </thead>
         </table>

@@ -1,11 +1,11 @@
 :root {
-    --bg: #f4f9f4;
-    --text: #071313;
-    --primary: #7e57c2;
-    --secondary: #8170e2;
-    --accent: #826bd8;
-    --nav-bg: #dcedc1;
-    --hovbg:rgb(147, 149, 191);
+    --bg: #1A1A2E;             /* Deep Night Blue */
+    --text: #F5F5F5;           /* Soft White */
+    --primary: #00ADB5;        /* Cyan-Teal Mix */
+    --secondary: #393E46;      /* Charcoal Gray */
+    --accent: #FF5722;         /* Deep Orange */
+    --nav-bg: #222831;         /* Very Dark Gray */
+    --hovbg: #212121;          
 }
 
 body {
@@ -17,18 +17,35 @@ body {
     transition: all 0.3s ease;
 }
 
-marquee{
-    background-color: var(--secondary);
-    font-size: 24px;
-    padding: 12px 0;
-    font-weight: bold;
-    color: var(--bg);
+/*Marquee effect*/
+.scroll-text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-nav{
+.scroll-text::after {
+  content: "YOUR TODOs";
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 12s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/*Navigation bar styling*/
+nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content: flex-start;
     background-color: var(--accent);
     padding: 10px;
     font-style: inherit;
@@ -46,7 +63,8 @@ nav a:hover {
     background-color: var(--hovbg);
 }
 
-fieldset{
+/*Fieldset styling*/
+fieldset {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
@@ -55,26 +73,26 @@ fieldset{
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-legend{
-    font-family:cursive;
+legend {
+    font-family: cursive;
     font-weight: bold;
     color: var(--primary);
 }
 
-.input-group{
+.input-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
 }
 
-input[type="text"]{
-     padding: 10px;
+input[type="text"] {
+    padding: 10px;
     border: 2px solid var(--primary);
     border-radius: 5px;
 }
 
-.btn-hvr{
+.btn-hvr {
     background-color: var(--accent);
     color: white;
     border: none;
@@ -85,14 +103,61 @@ input[type="text"]{
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-hvr:hover{
+.btn-hvr:hover {
     background-color: var(--hovbg);
     transform: scale(1.05);
 }
 
-
-.table{
+/*Table styling*/
+.table {
     margin: 40px auto;
     padding: 10px;
-    
+
+}
+
+.table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: #3d4a3d;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#Done {
+    background-color: #007bff;
+    color: white;
+}
+
+#Done:hover {
+    background-color: #0056b3;
+}
+
+#DelTodo {
+    background-color: #dc3545;
+    color: white;
+}
+
+#DelTodo:hover {
+    background-color: #a71d2a;
 }
